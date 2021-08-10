@@ -1,14 +1,14 @@
 {
-  "name": "interchained-web3-0x-altcoin-wallet-utility",
+  "name": "interchained-sidechained",
   "version": "1.0.0",
-  "description": "'Web3 0x + altcoin Wallet Utility': ERC20, BEP20, ethereum wallet generator, eth wallet, erc20 wallet, bsc wallet, bep20 wallet, binance smart chain wallet generator, binance smart chain wallet, bsc wallet",
+  "description": "'Web3 (0x + altcoin) Utility': ERC20, BEP20, ethereum wallet generator, eth wallet, erc20 wallet, bsc wallet, bep20 wallet, binance smart chain wallet generator, binance smart chain wallet, bsc wallet",
   "main": "interchained.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electronero/interchained-web3-ox-wallet-utility.git"
+    "url": "git+https://github.com/interchained/interchained-sidechained.git"
   },
   "keywords": [
     "ERC20",
@@ -41,9 +41,9 @@
   "author": "github.com/shopglobal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/electronero/interchained-web3-0x-altcoin-wallet-utility/issues"
+    "url": "https://github.com/electronero/interchained-sidechained/issues"
   },
-  "homepage": "https://github.com/electronero/interchained-web3-0x-altcoin-wallet-utility#readme",
+  "homepage": "https://github.com/electronero/interchained-sidechained#readme",
   "dependencies": {
     "react-hot-loader": "^4.13.0",
     "bootstrap": "^5.1.0",
