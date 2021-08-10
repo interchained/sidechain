@@ -1,8 +1,8 @@
-# <b>Interchained</b> | <b><u>SideChained</b></u> === <i>(Web3 + (0x + Altcoin) </i> 
-Designed, developed, and open-sourced by Shopglobal; Made possible by Electronero Network Project
-Interchained, as in interoperable blockchains. 
-SideChained is an interoperable sidechain ledger. 
-Web3 Support for 0x (BSC/ETH) && native support for Cryptonote out of the box. SideChained is based on a combination of two main components. SideChained open source package, and Electronero Passport, a Private API on server interacting with wallets. SideChained is portable. Enable cross-chain swaps & simultaneous transactions between ERC20, BEP20, and COINS. 
+# Interchained | <b>SideChained</b> === <i>(Web3 + (0x + Altcoin) </i> 
+Designed, developed, and open-sourced by Interchained ----> Connect with Interchained on Telegram at https://t.me/interchained  </br>
+Made possible by Electronero Network Project ----> join Electronero Network Board Room at https://t.me/electronero </br>
+Interchained, as in interoperable blockchains.</br>
+SideChained is a NodeJS based portable, interoperable, "cross-chain" ledger utlility which enables simultaneous or exclusive transaction support for ERC20/BEP20/COINS. Sidechain Web3 Support for 0x (BSC/ETH) && native support for Cryptonote out of the box. SideChained is based on a combination of two main components. SideChained open source package, and Electronero Passport, a Private API on server interacting with wallets. SideChained is portable. Enable cross-chain swaps & simultaneous transactions between ERC20, BEP20, and COINS. Web Server Public/Private API coming soon! Stay tuned! 
 ___________________________________________
 - [x] Web3 wallet create -> 'createWeb3Wallet' to generate Web3 wallets on cli, or server
 - [x] Web3 wallet recover -> 'recoverWeb3Wallet' (to be merged from #1987 in future release)
@@ -17,7 +17,8 @@ ___________________________________________
 - [x] increase interoperability between ETH & BSC blockchains 
 - [x] support ERC20/BEP20 tokens
 - [x] compatibile with coins (See Coin Compatibility list below)
-- [ ] compatibile with coins
+- [ ] create Web Server Public/Private API
+- [ ] 
 - [ ] enable cross-chain swaps: ERC20 to BEP20, BEP20 to ERC20, ERC20/BEP20 to coins, coins to ERC20/BEP20
 - [ ] Electronero Passport API integration
 - [ ] user account handling
