@@ -1,4 +1,4 @@
-# Interchained | <b>SideChained</b> === <i>(Web3 + (0x + Altcoin) </i> 
+# <b>Interchained</b> | <b><u>SideChained</b></u> === <i>(Web3 + (0x + Altcoin) </i> 
 Designed, developed, and open-sourced by Shopglobal; Made possible by Electronero Network Project
 Interchained, as in interoperable blockchains. 
 SideChained is an interoperable sidechain ledger. 
