@@ -1,0 +1,40 @@
+Address : 0xdebc4811278182c27b5da5eeb0830839fd658fe7
+PrivateKey: 0x3de2150d62188fadf234504305f4bb950bdce564e6a448659fe6baaea8533885
+Mnemonic: call sell slim large tornado exhaust analyst topple meadow marble sustain table
+
+Address : 0x472b529f35c0cb2b0e56fb3c8a91f86b14dac9cc
+PrivateKey: 0x2c18c418825ceb9030a88d03b190e32b6dbbc40ff1217d8607ec8a6139984acf
+Mnemonic: dinner squeeze fringe ability clog police know neck fancy quantum pen silk
+
+Address : 0x613e99c51f1175d9e6b459e398ff6002a025ceba
+PrivateKey: 0x7f91b1767be561eca937e43267831a3b8ca0cec6cad60f578ad89f9a1448f299
+Mnemonic: sick sweet round great diesel blossom crouch theory limit hamster cheese safe
+
+Address : 0x641ca75dc3f52d559deece6a9829f2a61d6458d6
+PrivateKey: 0x7a031d004bee6e439e874a64ad2f4a23a57228875ec4b197bb32f77cdbdec0de
+Mnemonic: raw patrol depend bacon sand gospel bicycle wash olive glass reject waste
+
+Address : 0xbbe058f966524f4d94e960a8d640c8367fe3be5d
+PrivateKey: 0x7f39113b2d2df5631bf6d74ecd9702fc9d6afa8ba68471802ca5e22f328c9574
+Mnemonic: pink second tiger service same select swim rabbit latin net lend reduce
+
+Address : 0xf6dc088f138dc38701ee2de33846dbe6a38abfb5
+PrivateKey: 0xa0e4bd614464afbe02eb419f3d165ec99bb608d936574bcf0d4d10d7147d7c10
+Mnemonic: empty find disorder call frame drama treat place beef witness swim grab
+
+Address : 0x8ead2290589a37b08f2531ca49f83fc73440675c
+PrivateKey: 0x845637c6c82cae5190928c281f0e321461e9c31a7e6ef78a3ba96b8af9f42789
+Mnemonic: repeat glide plastic erupt artefact cotton genre empty grow cool robust wall
+
+Address : 0xd7dea8ed73a314ba4009e183bd03d307740619b4
+PrivateKey: 0xab31f9f469544bc249daec1425861f0b63d1e48b95eb61bbf7bcbe49d3e60eef
+Mnemonic: price crane autumn empower enable warfare trip betray busy garage curtain misery
+
+Address : 0xd06975ea702a5fd75629e090dcb07867c3d670cf
+PrivateKey: 0x39e1986955a8138064cc1f63cd746a447d089bcec171935dabf6394ede84d4d3
+Mnemonic: romance panel elbow message tissue welcome fetch thought injury below super crater
+
+Address : 0x29012b835d8e3bbf916875e5343f15c9057935bb
+PrivateKey: 0xcb9ca29a19beeb788b756d26c2e0e57fc3045ba252f8ab1537a054304d702aec
+Mnemonic: what gaze canal marriage garage ring melt tunnel throw ring cricket fortune
+
