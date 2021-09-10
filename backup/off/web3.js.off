@@ -1,0 +1,310 @@
+/*
++-----------------------------------------------+
+|         0x Wallet Generator & Recovery Tool
+|                    ERC20 | BEP20
+|        Crafted by Viloid ( github.com/vsec7 )
+| Fork by Interchained ( github.com/shopglobal )|
++-----------------------------------------------+
+*/
+//
+// ETH utils && integrations
+const ethutils = require('ethereum-mnemonic-privatekey-utils');
+const bip39 = require('bip39');
+const { Account } = require('eth-lib/lib');
+//
+// Inject packages 
+const rl = require('readline-sync')
+const fs = require('fs')
+// BSC utils && integrations
+const Web3 = require('web3');
+// mainnet BSC
+const bep_web3 = new Web3('https://bsc-dataseed1.binance.org:443');
+// testnet BSC
+//const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545');
+// mainnet ETH
+const erc_web3 = new Web3('https://mainnet.infura.io/v3/a60a84ebf4fe4290b094b75d9c383b7f');
+// const infura_secret ='8fe50d6e617f4e40868d67a44ac88844';
+// testnet ETH
+//const web3 = new Web3('https://rinkeby.infura.io/v3/a60a84ebf4fe4290b094b75d9c383b7f');
+var erc20 = false;
+var bep20 = false;
+var eth = 'ETH';
+var bsc = 'BSC';
+var web3_erc20 = new Web3(erc_web3);
+var web3_bep20 = new Web3(bep_web3);
+var web3;
+var network; 
+web3_selector = function(blockchain) {
+	network = blockchain;
+	if(network != 'ETH'){
+		network = 'BSC';
+		bep20 = true;
+		erc20 = false;
+        web3 = web3_bep20;
+        console.log("Blockchain Network: "+ network);
+    } else if(network != 'BSC') {
+    	network = 'ETH';
+    	bep20 = false;
+    	erc20 = true;
+    	web3 = web3_erc20;
+    	console.log("Blockchain Network: "+network);
+    };
+};
+async function createWalletTest(){
+		const mnemonic = bip39.generateMnemonic();
+		mnemonic_ = mnemonic;
+		const pk = '0x' + ethutils.getPrivateKeyFromMnemonic(mnemonic);
+		pk_ = pk;
+		const acc = Account.fromPrivate(pk);
+		acc_ = acc;
+		return {
+			'address': (acc.address).toLowerCase(), 
+			'pk': pk,
+			'mnemonic': mnemonic
+		}
+};
+// async function test(){
+// 	web3_selector(eth);
+// 	web3.eth.getBlockNumber().then((result) => {
+//     	if(network != 'ETH'){
+//     		console.log("Latest Ethereum Block is ",result);
+//     	} else {
+//     		console.log("Latest Binance Smart Chain Block is ",result);
+//     	}
+//     });
+// 	const wallet = await createWalletTest();
+// 	const data = `Address : ${wallet.address}\nPrivateKey: ${wallet.pk}\nMnemonic: ${wallet.mnemonic}\n`;
+// 	console.log(data);
+// 	web3_selector(bsc);
+// 	web3.eth.getBlockNumber().then((result) => {
+//     	if(network != 'BSC'){
+//     		console.log("Latest Ethereum Block is ",result);
+//     	} else {
+//     		console.log("Latest Binance Smart Chain Block is ",result);
+//     	}
+//     });
+// 	const account = web3.eth.accounts.privateKeyToAccount(wallet.pk);
+// 	console.log(account);
+// };
+// test();
+// Global Variables
+const zero = 0;
+var acc_ = '';
+var holder = '';
+var bep20_holder = '';
+var erc20_holder = '';
+var whale = '';
+var mnemonic_ = '';
+const test_private_key = '0xe500f5754d761d74c3eb6c2566f4c568b81379bf5ce9c1ecd475d40efe23c577';
+var pk_ = test_private_key;
+var test_seed = mnemonic_;
+var test_address = '0xC925F19cb5f22F936524D2E8b17332a6f4338751';
+var addr_ = test_address;
+var address = (addr_ === test_address) ? test_address : addr_;
+var balance = zero;
+var erc20_balance = zero;
+var bep20_balance = zero;
+var targets = [{ whales: ["0x5dd4df3a1c0904d10acc20f4fd161bf68a5a4ed2","cat","whale","king","crypto", "moon"]}];
+var entropy = 'cat';
+var bep20_wallet = {
+	address: Web3.utils.toChecksumAddress(addr_),
+	privateKey: test_private_key,
+	whale: false,
+	balance: bep20_balance
+};
+var erc20_wallet = {
+	address: Web3.utils.toChecksumAddress(addr_),
+	privateKey: pk_,
+	seed: test_seed,
+	whale: false,
+	balance: erc20_balance
+};
+//
+// Constructor Function Development
+//
+// ERC20
+function ERC20Address(address,privateKey,balance,whale,mnemonic,account) {
+	this.address_ = Web3.utils.toChecksumAddress(address);
+	this.privateKey_ = privateKey;
+	this.balance_ = JSON.stringify(balance,null,"    ");
+	this.whale_ = whale;
+	this.mnemonic_ = mnemonic;
+	this.account_ = account;
+}
+//
+// BEP20
+//
+function BEP20Address (address,privateKey,balance,whale,mnemonic,account){
+	this.address_ = Web3.utils.toChecksumAddress(address);
+	this.privateKey_ = privateKey;
+	this.balance_ = JSON.stringify(balance,null,"    ");
+	this.whale_ = whale;
+	this.mnemonic_ = mnemonic;
+	this.account_ = account;
+};
+//
+// ERC20 Wallet Handling
+//
+// check ERC20 account
+//
+ERC20Address.prototype.getBalance = function(address,privateKey,whale,mnemonic,account){
+	web3_selector(eth);
+	web3.eth.getBalance(Web3.utils.toChecksumAddress(address)).then(JSON.stringify(console.log),null,"    ");
+	const whale_balance = JSON.stringify(web3.eth.getBalance(Web3.utils.toChecksumAddress(address)),null,"    ");
+	erc20_wallet.balance = whale_balance;
+	erc20Wallet = new ERC20Address(address,privateKey,whale_balance,whale,mnemonic,account);
+	console.log("\n"+"Balance: "+ erc20Wallet.balance);
+	console.log("\n"+"Whale VVVVVVV"+"\n");
+	console.log(erc20Wallet);
+	const ret = 'Whale??? Status: ' + whale + '\n' + ' Balance: ' + erc20Wallet.balance + '\n' + 'Address: ' + address + '\n' + 'Private Key: ' + privateKey + '\n' + ' Mnemonic: ' + mnemonic + '\n';
+	console.log(ret);
+	const erc20_data = `Whale??? Status: ${whale} \nBalance: ${erc20Wallet.balance}\nAddress : ${address}\nPrivateKey: ${privateKey}\nMnemonic: ${mnemonic}\n`;
+	var erc20_Balance;
+	var gold = (erc20Wallet.balance > 0 && erc20Wallet.balance != undefined) ? 'GOLD' : false;
+	console.log("Did we find gold? Status: " + gold)
+	if(gold === false){
+		erc20_Balance = './'+'VIRGIN_ERC20_balance_'+erc20Wallet.balance+'_'+address;
+		fs.appendFile(erc20_Balance, erc20_data+'\n', (err) => { if(err) throw err; });
+	} else {
+		// keep digging ?
+		erc20_Balance = './'+'GOLD_ERC20_balance_'+erc20Wallet.balance+'_'+address;
+		fs.appendFile(erc20_Balance, erc20_data+'\n', (err) => { if(err) throw err; });
+	}
+	return ret;
+};
+//
+// print ERC20 account
+//
+ERC20Address.prototype.toPrint = function(address,privateKey,whale,balance,mnemonic,account) {
+	bep20_wallet.address_ = address;
+	bep20_wallet.privateKey_ = privateKey;
+	bep20_wallet.whale = whale;
+	bep20_wallet.mnemonic = mnemonic;
+	bep20_wallet.account = account;
+	console.log("\n");
+	web3_selector(eth);
+	ERC20Address.prototype.getBalance(address,privateKey,whale,mnemonic,account);
+}
+//
+// BEP20 Wallet Handling
+//
+//check BEP20 balance
+//
+BEP20Address.prototype.getBalance = function(address,privateKey,whale,mnemonic,account){
+	web3_selector(bsc);
+	web3.eth.getBalance(Web3.utils.toChecksumAddress(address)).then(JSON.stringify(console.log),null,"    ");
+	const whale_balance = JSON.stringify(web3.eth.getBalance(Web3.utils.toChecksumAddress(address)),null,"    ");
+	bep20_wallet.balance = whale_balance;
+	bep20Wallet = new BEP20Address(address,privateKey,whale_balance,whale,mnemonic,account);
+	console.log("\n"+"Balance: "+ erc20Wallet.balance);
+	console.log("\n"+"Whale VVVVVVV"+"\n");
+	console.log(erc20Wallet);
+	const ret = 'Whale??? Status: ' + whale + '\n' + ' Balance: ' + bep20Wallet.balance + '\n' + 'Address: ' + address + '\n' + 'Private Key: ' + privateKey + '\n' + ' Mnemonic: ' + mnemonic + '\n';
+	console.log(ret);
+	const bep20_data = `Whale??? Status: ${whale} \nBalance: ${erc20Wallet.balance}\nAddress : ${address}\nPrivateKey: ${privateKey}\nMnemonic: ${mnemonic}\n`;
+	var bep20_Balance;
+	var gold = (bep20Wallet.balance > 0) ? 'GOLD' : false;
+	console.log("Did we find gold? Status: " + gold)
+	if(gold === false){
+		bep20_Balance = './'+'VIRGIN_BEP20_balance_'+bep20Wallet.balance+'_'+address;
+		fs.appendFile(bep20_Balance, bep20_data+'\n', (err) => { if(err) throw err; });
+	} else {
+		// keep digging?
+		bep20_Balance = './'+'GOLD_BEP20_balance_'+bep20Wallet.balance+'_'+address;
+		fs.appendFile(bep20_Balance, bep20_data+'\n', (err) => { if(err) throw err; });
+	}
+	return ret;
+};
+//
+// print BEP20 account
+//
+BEP20Address.prototype.toPrint = function(address,privateKey,whale,mnemonic,account) {
+	bep20_wallet.address = address;
+	bep20_wallet.privateKey = privateKey;
+	bep20_wallet.whale = whale;
+	bep20_wallet.mnemonic = mnemonic;
+	bep20_wallet.account = account;
+	console.log("\n");
+	web3_selector(bsc);
+	BEP20Address.prototype.getBalance(address,privateKey,whale,mnemonic,account);
+};
+//
+// Begin 0x functions 
+//
+	async function createWallet(){
+		const mnemonic = bip39.generateMnemonic();
+		mnemonic_ = mnemonic;
+		const pk = '0x' + ethutils.getPrivateKeyFromMnemonic(mnemonic);
+		pk_ = pk;
+		const acc = Account.fromPrivate(pk);
+		acc_ = acc;
+		return {
+			'address': (acc.address).toLowerCase(), 
+			'pk': pk,
+			'mnemonic': mnemonic
+		}
+	}
+	async function generateWallet(n,o){
+		for (var i = 1; i <= n; i++) {
+		// BEP20
+		// create account
+		//
+		// const bep20_account = web3.eth.accounts.create([entropy]);
+		// bep20_wallet.address = bep20_account.address;
+		// bep20_wallet.private_key = bep20_account.private_key; 
+
+		// create 0x account
+		const wallet = await createWallet();
+		const data = `Address : ${wallet.address}\nPrivateKey: ${wallet.pk}\nMnemonic: ${wallet.mnemonic}\n`;
+		addr_ = wallet.address;
+	 	function getIndex (addr_,whales) {
+			if (addr_ === whales) {
+				whale = true;
+				erc20_wallet.whale = true;
+	            web3_selector(eth);
+				ERC20Address.prototype.toPrint(addr_,pk_,0,erc20_wallet.whale,mnemonic_,acc_);
+				bep20_wallet.whale = true;
+	            web3_selector(bsc);
+				BEP20Address.prototype.toPrint(addr_,pk_,0,bep20_wallet.whale,mnemonic_,acc_);
+     			console.log("whales ahoy! "+"\n"+"WHALE: "+ whales);
+			} else {
+				whale = false;
+				erc20_wallet.whale = false;
+				web3_selector(eth);
+	            ERC20Address.prototype.toPrint(addr_,pk_,0,erc20_wallet.whale,mnemonic_,acc_);
+				bep20_wallet.whale = false;
+	            web3_selector(bsc);
+				BEP20Address.prototype.toPrint(addr_,pk_,0,bep20_wallet.whale,mnemonic_,acc_);
+				return -1;
+			}
+			if(o){
+				fs.appendFile(o, data+'\n', (err) => { if(err) throw err; });
+			}
+			//console.log(data);
+		} 
+		for (var j = 0; j < targets.length; ++j) {
+			console.log("loading list: " + targets[j].whales); 
+			getIndex(addr_, targets[j].whales);
+		}
+	}		
+}
+
+//
+// Globalize Initialization
+//
+(async () => {
+	console.log(`
+/*
++-----------------------------------------------+
+| 	  0x Wallet Generator & Recovery Tool      
+|	             ERC20 | BEP20 
+| 	 Crafted by Viloid ( github.com/vsec7 )
+| Fork by Interchained ( github.com/shopglobal )|
++-----------------------------------------------+
+*/
+		`)
+	const n = rl.question('[?] How Many Wallet: ');
+	const o = rl.question('[?] Output (just enter if you dont need backup to file): ');
+	console.log('\n');
+	await generateWallet(n,o);
+})();

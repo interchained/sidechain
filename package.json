@@ -1,0 +1,36 @@
+{
+  "name": "interchained-web3-0x-wallet-utility",
+  "version": "1.0.0",
+  "description": "ERC20, BEP20, ethereum wallet generator, eth wallet, erc20 wallet, bsc wallet, bep20 wallet, binance smart chain wallet generator, binance smart chain wallet, bsc wallet",
+  "main": "interchained.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electronero/interchained-web3-ox-wallet-utility.git"
+  },
+  "keywords": [
+    "ERC20",
+    "BEP20"
+  ],
+  "author": "github.com/shopglobal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/electronero/interchained-web3-ox-wallet-utility/issues"
+  },
+  "homepage": "https://github.com/electronero/interchained-web3-ox-wallet-utility#readme",
+  "dependencies": {
+    "bip39": "^3.0.4",
+    "eth-lib": "^0.1.29",
+    "ethereum-mnemonic-privatekey-utils": "^1.0.5",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.21",
+    "readline-sync": "^1.4.10",
+    "web3": "^1.5.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
