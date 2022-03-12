@@ -80,9 +80,18 @@ Access interchained-web3-0x utility with command ```node interchained-web3-0x-cl
 You'll be prompted to enter the amount of 0x addresses you would like to generate. 
 <p>&nbsp;</p>
 ### interchained-web3-0x-server (soon)
-Spin up a headless interchained-web3-0x web server node in one-line with command ```node bin/www/interchained-web3-0x-server.js 8080```
-...or use package scripts:  ```npm run server```
-...or add a flag to interchained-web3-0x-cli  on startup ```--server 8080``` to  interchained-web3-0x
+Spin up a headless interchained-web3-0x web server node in one-line with command 
+ ```
+ node bin/www/interchained-web3-0x-server.js 8080
+ ```
+...or use package scripts:  
+ ```
+ npm run server
+ ```
+...or add a flag to interchained-web3-0x-cli  on startup 
+ ```
+ --server 8080
+ ``` to  interchained-web3-0x
 ex. ```node interchained-web3-0x-cli.js --server 8080``` 
 Close all headless interchained nodes command: ```npm run disconnect```
 Default web server runs on port 8080.
@@ -97,9 +106,15 @@ Web3 <a href='https://infura.io/dashboard/ethereum'><img src='https://s3.amazona
 Web3 <a href='https://infura.io/dashboard/ethereum'><img src='https://s3.amazonaws.com/infura-blog-content/2021/05/pasted-image-0--40-.png' width="3%" height="3%"><a/> NPM: https://www.npmjs.com/package/web3
  <p>&nbsp;</p>
 Web3 <a href='https://infura.io/dashboard/ethereum'><img src='https://s3.amazonaws.com/infura-blog-content/2021/05/pasted-image-0--40-.png' width="3%" height="3%"><a/> DOCS: https://web3js.readthedocs.io/en/v1.2.2/getting-started.html#adding-web3-js
-Installing Web3 is as easy as ```npm i web3 --save```
+Installing Web3 is as easy as 
+ ```
+ npm i web3 --save
+ ```
  <p>&nbsp;</p>
-Then in the app require Web3 ```const Web3 = require('web3');```
+Then in the app require Web3 
+ ```
+ const Web3 = require('web3');
+ ```
 <p>&nbsp;</p>
 
 ## Establish Web3 <a href='https://web3js.readthedocs.io/en/v1.2.2/getting-started.html#adding-web3-js'><img src='https://s3.amazonaws.com/infura-blog-content/2021/05/pasted-image-0--40-.png' width="3%" height="3%"><a/> Connection to ETH blockchain with Infura <a href='https://infura.io/dashboard/ethereum'><img src='https://i.ibb.co/kB3LMss/infura.png' width="3%" height="3%"><a/>
@@ -143,28 +158,7 @@ Webpack is ...
 <p>&nbsp;</p>
  
 # Donate
-## Electronero Network Project Exchange Listing Fund!
- Bonus coins are available to qualifying donors. See below for details. To donate now select an address below, and message @_electronero on Twitter (https://twitter.com/_electronero) to claim your bonus. Twitter @_electronero are the only authorized Electronero core members authorized to accept donations for the listing fund, and distribute bonus free coins. Don't accept any private messages from anyone claiming to be members of Electronero project. Only https://twitter.com/_electronero is the official @_electronero twitter page. 
- 
- ### Eligible donors receive Free Gift, Bonus Coins of up to 10x donation value. See below for details. 
- Bonus free coins are distributed in the donors choice of Electronero Network coins in any combination: ETNX, ETNXP, LTNX, GLDX, or CRFI. 
- Bonus coins are free ETNX, ETNXP, LTNX, GLDX, or CRFI coins made available through the official listing fund coin pool. Bonus free coins from 1.5x multiplier all the way up to 10x multipliers are available for donations over $150 value in any digital currency. 
 
-Donate ₮1000 to the Electronero Project Exchange Listing Fund, and receive a free gift. 
-A ₮2000 bonus in ETNX, ENTXP, LTNX, GLDX, or CRFI coins
-
-Bonus free coins are multiplied based on your donation! 
-
-```
-Donate over ₮150 to receive 1.5x free bonus coins.
-Donate over ₮1000 to receive 2x free bonus coins.
-Donate over ₮2500 to receive 2.5x free bonus coins.
-Donate over ₮3000 to receive 3x free bonus coins.
-Donate over ₮5000 to receive 5x free bonus coins.
-Donate over ₮10,000 to receive 10x free bonus coins.
-```
-
-### Example: Donate ₮1000, and receive ₮2000 free bonus coins in ETNX, ENTXP, LTNX, GLDx, or CRFI.
 
 ## Official Donation Addresses:
 
@@ -183,17 +177,5 @@ USDt: `0x59d26980a1cdd75e1c3af516b912a6233aa2f5e4`
 XMR: `85PTaJNpkEEeJao2MNk1sRWTQXLUf1FGjZew8oR8R4cRUrXxFrTexa9GwrjmJD4Pyx6UrjgMQnuMoFNmaBKqxs7PPXVe9oX`
 
 ### Thank you 
-
-```
- To donate other coins not mentioned above message @_electronero on Twitter (https://twitter.com/_electronero directly.
- No KYC, and no personal information is necessary to claim bonus free coins. 
- 
- To claim bonus free coins simply message @_electronero on Twitter (https://twitter.com/_electronero) 
- Include the following proof of spend in your message to track coins/tokens donated.
-• coin symbol
-• amount of coins donated
-• transaction ID 
-• screenshot of withdrawal from your wallet
-```
 
 
